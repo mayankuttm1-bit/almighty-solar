@@ -1,0 +1,270 @@
+/* Almighty Solar Energy - Premium Custom Clean-Tech Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-canvas-dark: #0B132B;
+  --color-surface-navy: #111D4A;
+  --color-surface-card: #1E293B;
+  --color-canvas-light: #F8FAFC;
+  --color-amber-primary: #F59E0B;
+  --color-amber-hover: #D97706;
+  --color-emerald-accent: #10B981;
+}
+
+html {
+  overflow-x: clip;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1E293B;
+  background-color: #FFFFFF;
+  overflow-x: clip;
+}
+
+.font-mono-numbers {
+  font-family: 'Inter', monospace;
+  font-feature-settings: 'tnum' on, 'zero' on;
+}
+
+/* Glassmorphism & Surface Utilities */
+.glass-dark {
+  background: rgba(11, 19, 43, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-dark {
+  background: rgba(30, 41, 59, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Gradients */
+.bg-gradient-solar {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
+
+.bg-gradient-hero {
+  background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.16) 0%, transparent 50%),
+              radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.14) 0%, transparent 50%),
+              #0B132B;
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Solar Grid Pattern */
+.bg-solar-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-solar-grid-light {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+/* Custom Interactive Slider Styling */
+input[type=range].solar-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: #E2E8F0;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type=range].solar-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #F59E0B;
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type=range].solar-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #D97706;
+}
+
+input[type=range].solar-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #F59E0B;
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+  transition: transform 0.15s ease;
+}
+
+/* Mobile Navigation Drawer with High Stacking Context */
+#mobile-menu-drawer {
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+  z-index: 99999;
+}
+
+#mobile-menu-drawer .drawer-content {
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.4);
+}
+
+#mobile-menu-drawer.active-drawer .drawer-content {
+  transform: translateX(0);
+}
+
+/* Quote Modal Transition */
+#quote-modal {
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s ease;
+  z-index: 100000;
+}
+
+#quote-modal .modal-content {
+  transform: scale(0.94) translateY(12px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+#quote-modal.active-modal .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Hardware-Accelerated Scroll Reveal Keyframes */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Subtle Solar Pulse Animation */
+@keyframes solarPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(245, 158, 11, 0);
+  }
+}
+
+.animate-solar-pulse {
+  animation: solarPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Emerald Clean Tech Glow */
+@keyframes emeraldGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+  }
+}
+
+.animate-emerald-glow {
+  animation: emeraldGlow 3s ease-in-out infinite;
+}
+
+/* FAQ Accordion Transitions */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  transition: max-height 0.45s ease-in-out;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Value Pop on Calculator Change */
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); color: #F59E0B; }
+  100% { transform: scale(1); }
+}
+
+.val-pop {
+  animation: popEffect 0.25s ease-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B132B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 5px;
+  border: 2px solid #0B132B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F59E0B;
+}
