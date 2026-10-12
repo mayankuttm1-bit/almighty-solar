@@ -53,20 +53,15 @@
   </g>
 
   <!-- TYPOGRAPHY HIERARCHY (X=130 onwards) -->
-  <g transform="translate(132, 24)">
+  <g transform="translate(132, 32)">
     <!-- Primary Brand Title -->
-    <text x="0" y="38" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="32" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">
+    <text x="0" y="36" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">
       ALMIGHTY SOLAR
     </text>
 
     <!-- Brand Category / Subtitle -->
-    <text x="0" y="62" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#F59E0B" letter-spacing="3.2">
+    <text x="0" y="62" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#F59E0B" letter-spacing="3.2">
       ENERGY • INDORE (M.P.)
-    </text>
-
-    <!-- Engineering & Accreditation Badge Subtext -->
-    <text x="0" y="80" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="500" fill="#94A3B8" letter-spacing="1.2">
-      SOLAR EPC • PM SURYA GHAR EMPANELED • MPPKVVCL
     </text>
   </g>
 </svg>
