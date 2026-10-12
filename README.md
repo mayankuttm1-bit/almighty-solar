@@ -4,6 +4,11 @@ Institutional clean-technology website platform designed and built for **Almight
 
 Designed to mirror the comprehensive depth, interactive features, responsive polish, and institutional rigor of the benchmark Vidya Vahini Solar platform, but 100% customized for Almighty Solar Energy and calibrated for the regulatory, tariff, and solar insolation environment of Central Madhya Pradesh.
 
+### 🌐 Live Production Deployment
+- **Live Website:** [https://mayankuttm1-bit.github.io/almighty-solar/](https://mayankuttm1-bit.github.io/almighty-solar/)
+- **GitHub Repository:** [https://github.com/mayankuttm1-bit/almighty-solar](https://github.com/mayankuttm1-bit/almighty-solar)
+- **Deployment Platform:** GitHub Pages (Automatic CI/CD from `main`)
+
 ---
 
 ## ☀️ Regional Energy & Business Profile
